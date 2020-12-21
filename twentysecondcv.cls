@@ -186,7 +186,7 @@
     %------------------------------------------------
     
         \vspace{4mm}
-    {\Huge\color{pblue}\cvname}
+    {\LARGE\color{pblue}\cvname}
     
     \vspace{2mm}
 
@@ -210,10 +210,10 @@
       \ifthenelse{\equal{\cvsite}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
+              \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faLanguage}}
               \end{array}
               $} 
-            & \href{http://\cvsite}{\cvsite} \\}
+            & \cvsite \\}
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
@@ -331,6 +331,17 @@
 		\ifblank{#5}{}{#5 \\}
 		#6%
 	}\\
+}
+
+\newcommand{\twentyitemshorttest}[5]{%
+  #1&\parbox[t]{0.83\textwidth}{%
+    \textbf{#3}% 
+    \hfill%
+    {\textcolor{pblue}{\textbf{#4}}}%
+        }\\%
+    #2&\parbox[t]{0.83\textwidth}{%
+    \ifblank{#5}{}{#5} %
+  }\\
 }
 
 %----------------------------------------------------------------------------------------
