@@ -12,7 +12,8 @@
 \def\arrow#1{\pspicture[shift=2pt](#1,0)\psline{->}(#1,0)\endpspicture}
 
 \usepackage{pstricks}
-
+% \usepackage{enumerate}
+% \usepackage{fontmfizz}
 \usepackage{fontawesome}
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
@@ -64,8 +65,6 @@
 \definecolor{sidecolor}{HTML}{E7E7E7}
 \definecolor{mainblue}{HTML}{0E5484}
 \definecolor{maingray}{HTML}{B9B9B9}
-
-\definecolor{pblue}{HTML}{0395DE}
 
 \definecolor{darkgray}{HTML}{333333}
 \definecolor{gray}{HTML}{4D4D4D}
@@ -155,7 +154,7 @@
 \newcommand\programming[1]{ 
 	\renewcommand{\programming}{
 		\begin{tikzpicture}
-        	\node [above right] at (0, 4) {$0 \: LOC \: \arrow{3.2} \: 5000 \: LOC$};
+        	\node [above right] at (0, 4) {$0 \: LOC \: \arrow{3.2} \: 20000 \: LOC$};
 			\foreach [count=\i] \x/\y in {#1}{
 				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
 				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
@@ -169,6 +168,13 @@
 		{#1}
 	}
 }
+
+\newcommand\tools[1]{ 
+  \renewcommand{\tools}{
+    {#1}
+  }
+}
+
 
 %----------------------------------------------------------------------------------------
 %  SIDEBAR LAYOUT
@@ -241,13 +247,19 @@
 
     %------------------------------------------------
     \vspace{3mm}
-    \profilesection{Technical Skills}{1.2cm}
+    % \profilesection{Technical Skills}{1.2cm}
     
     {\large \textbf{Overview}}
 
 	\skills
         
         %------------------------------------------------
+  \vspace{1mm}
+        % \profilesection{Education}{3cm} 
+    {\large \textbf{Tools}} \\ \\
+    % \vspace{3mm}
+    \hspace{0.55cm} \tools
+    % \education
         
         \vspace{3mm}
        
@@ -255,10 +267,6 @@
 
 		 \programming
          
-        \vspace{3mm}
-        \profilesection{Education}{3cm} 
-        
-        \education
       
   \end{textblock}
 }
@@ -337,7 +345,7 @@
   #1&\parbox[t]{0.83\textwidth}{%
     \textbf{#3}% 
     \hfill%
-    {\textcolor{pblue}{\textbf{#4}}}%
+    {{#4}}%
         }\\%
     #2&\parbox[t]{0.83\textwidth}{%
     \ifblank{#5}{}{#5} %
@@ -385,10 +393,17 @@
     % set center bubble color
     bubble center node color = pblue,
     % define the list of colors usable in the diagram
-    set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+    set color list = {materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
     % sets the opacity at which the bubbles are shown
-    bubble fill opacity = 0.6,
+    bubble fill opacity = 0.5,
     % sets the opacity at which the bubble text is shown
     bubble text opacity = 1,
+    description title text width=0.5cm,
+    description title width=0.5cm,
+    description width=5cm,
+    description text width=5cm,
+    descriptive items y sep =1.25,
+    back arrow distance = 0,
+    back arrow disabled = true,
+    border color = white
 }
-

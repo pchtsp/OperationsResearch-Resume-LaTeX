@@ -23,16 +23,16 @@
 ~
 	\smartdiagram[bubble diagram]{
         \textbf{Artificial}\\\textbf{Intelligence},
-        \textbf{~~~~Data~~~~}\\\textbf{Viz},
-        \textbf{~Simulation~},
+        \textbf{~~~~DataViz~~~~},
+        \textbf{~Data \&~}\\\textbf{Simulation},
         \textbf{~Optimization~},
         \textbf{~~Machine~~}\\\textbf{Learning},
-        \textbf{~~DevOps~~}
+        \textbf{~~~DevOps~~~}
     }
 }
 
 % Programming skill bars
-\programming{  {JavaScript $\textbullet$ html  $\textbullet$ css / 3},   {R $\textbullet$ SQL $\textbullet$ \large \LaTeX / 3.5},  {Python / 5}}
+\programming{  {javascript $\textbullet$ html  $\textbullet$ css / 1},   {r $\textbullet$ sql / 4},  {python $\textbullet$ aimms / 5.5}}
 
 % Projects text
 % \education{
@@ -50,13 +50,27 @@
 %   2006 - 2010 | Lima, Perú
 % }
 
-% \section{Languages} 
-
-% \languages{
-%   \textbf{English}, Advanced level                \vspace{0mm}\\%
-%   \textbf{French}, Advanced level                 \vspace{0mm}\\%
-%   \textbf{Spanish}, Native language               \vspace{0mm}\\%  
-% }
+\tools{
+\tikzset{
+  every shadow/.style={
+    fill=none,
+    shadow xshift=0pt,
+    shadow yshift=0pt}
+}
+\hspace{-1.0cm}
+% \definecolor{pblue}{HTML}{0395DE}
+% \smartdiagramset{set color list = {pblue,pblue,pblue,pblue,pblue,pblue,pblue}}
+\tikzset{description/.append style={top color=\col,bottom color=\col, fill opacity = 0.5, text opacity = 1},
+ description title/.append style={top color=\col,bottom color=\col, fill opacity = 0.5, text opacity = 1}}
+\smartdiagram[descriptive diagram]{
+% Sklearn Xgboost Caret RandomForest TensorFlow Keras NLTK Gensim Forecast Pandas Numpy
+{\large \faAreaChart,{ggplot tikz beamer rmarkdown pandoc shiny d3js leaflet knitr}},
+{\large \faDatabase,{tidyverse data.table pandas numpy postgresql mysql simio}}, 
+{\large \faShareAlt,{pulp aimms cplex gurobi ortools heuristics graph-tool networkx}},
+{\large \faFlask,{sklearn regression decision-trees arima svm clustering}},
+{\large \faCogs,{git flask docker travis aws heroku pyinstaller shinyapps}},
+}
+}
 
 
 %----------------------------------------------------------------------------------------
@@ -127,13 +141,13 @@
 	\twentyitem
     	{2019 - }
 		{}
-        {Maintainer of open source mathematical modeler}
+        {PuLP: Maintainer of open source mathematical modeler}
         {\href{https://github.com/coin-or/pulp}{PuLP}}
         {}
         {
         {\begin{itemize}
         \item Maintainer of one of the most used python libraries in mathematical modeling, part of the COIN-OR group
-        \item 1000 stars, 200 forks
+        \item 1000 stars, 200 forks in github
         \item Connects to several solvers: CPLEX, GUROBI, CBC, MIPCL, CHOCO, SCIP, MOSEK, GPLK
         \vspace{2mm}
 		\end{itemize}}
@@ -157,7 +171,7 @@
   \twentyitem
       {2015 - 2017}
     {}
-        {GM: Real-time car inventory simulation}
+        {GM: Car Assembly Line Simulation}
         {\href{https://baobabsoluciones.es/en/}{baobab soluciones S.L.}}
         {}
         {
@@ -172,13 +186,13 @@
   \twentyitem
       {2015 - 2017 }
     {}
-        {Repsol: Liquid Petrouleum Gas Logistics}
+        {Repsol: Supply Chain Optimization}
         {\href{https://baobabsoluciones.es/en/}{baobab soluciones S.L.}}
         {}
         {
         {\begin{itemize}
         \item Migration, improvement and deployment of a client-server enterprise application
-        \item Optimization of yearly oil transport, purchase and production using mathematical programming
+        \item Optimization of yearly liquid gas transport, purchase and production using mathematical programming
         \item \textbf{Tools}: AIMMS, AIMMS PRO, CPLEX, SQL
         \vspace{2mm}
     \end{itemize}}
@@ -187,7 +201,7 @@
   \twentyitem
       {2013 - 2013 }
     {}
-        {Air Liquide: Production scheduling optimization}
+        {Air Liquide: Production Planning}
         {\href{https://baobabsoluciones.es/en/}{baobab soluciones S.L.}}
         {}
         {
